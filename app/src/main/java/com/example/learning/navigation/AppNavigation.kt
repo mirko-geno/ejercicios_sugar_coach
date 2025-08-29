@@ -7,6 +7,7 @@ import androidx.navigation.compose.composable
 import com.example.learning.screens.FizzbuzzScreen
 import com.example.learning.screens.F1GameScreen
 import com.example.learning.screens.WelcomeScreen
+import com.example.learning.screens.IntersectionScreen
 
 @Composable
 fun AppNavigation(navController: NavHostController) {
@@ -14,5 +15,6 @@ fun AppNavigation(navController: NavHostController) {
         composable("welcome") { WelcomeScreen(navController) }
         composable("fizzbuzz") { FizzbuzzScreen() }
         composable("f1game") { F1GameScreen() }
+        composable("intersection") { IntersectionScreen() }
     }
 }

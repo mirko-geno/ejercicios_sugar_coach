@@ -11,6 +11,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
 import com.example.learning.R
+import com.example.learning.backend.F1Game
+import com.example.learning.backend.Track
 
 @Composable
 fun F1GameScreen(modifier: Modifier = Modifier) {

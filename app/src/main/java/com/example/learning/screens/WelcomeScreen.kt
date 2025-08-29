@@ -50,6 +50,18 @@ fun WelcomeScreen(navController: NavHostController) {
             ) {
                 Text("Carrera F1")
             }
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Button(
+                onClick = { navController.navigate("intersection") },
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    contentColor = MaterialTheme.colorScheme.onPrimary
+                )
+            ) {
+                Text("Intersección")
+            }
         }
     }
 }
