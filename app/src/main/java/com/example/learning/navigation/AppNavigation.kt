@@ -9,6 +9,7 @@ import com.example.learning.screens.F1GameScreen
 import com.example.learning.screens.WelcomeScreen
 import com.example.learning.screens.IntersectionScreen
 import com.example.learning.screens.PolygonAreaScreen
+import com.example.learning.screens.RockPaperScissorsApp
 
 @Composable
 fun AppNavigation(navController: NavHostController) {
@@ -18,5 +19,6 @@ fun AppNavigation(navController: NavHostController) {
         composable("f1game") { F1GameScreen() }
         composable("intersection") { IntersectionScreen() }
         composable("polygon") { PolygonAreaScreen() }
+        composable("rps") { RockPaperScissorsApp() }
     }
 }

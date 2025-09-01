@@ -74,6 +74,18 @@ fun WelcomeScreen(navController: NavHostController) {
             ) {
                 Text("Área polígonos")
             }
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Button(
+                onClick = { navController.navigate("RPS") },
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    contentColor = MaterialTheme.colorScheme.onPrimary
+                )
+            ) {
+                Text("Piedra Papel o Tijera")
+            }
         }
     }
 }
