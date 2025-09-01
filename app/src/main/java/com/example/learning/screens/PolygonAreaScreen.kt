@@ -233,13 +233,13 @@ fun PolygonPreview(type: PolygonType) {
             }
             PolygonType.RECTANGLE -> {
                 Text(
-                    "base",
+                    "Base",
                     modifier = Modifier
                         .align(Alignment.BottomCenter)
                         .padding(bottom = 8.dp)
                 )
                 Text(
-                    "altura",
+                    "Altura",
                     modifier = Modifier
                         .align(Alignment.CenterEnd)
                         .padding(end = 8.dp)
@@ -247,13 +247,13 @@ fun PolygonPreview(type: PolygonType) {
             }
             PolygonType.TRIANGLE -> {
                 Text(
-                    "base",
+                    "Base",
                     modifier = Modifier
                         .align(Alignment.BottomCenter)
                         .padding(bottom = 8.dp)
                 )
                 Text(
-                    "altura",
+                    "Altura",
                     modifier = Modifier
                         .align(Alignment.CenterEnd)
                         .padding(end = 8.dp)
