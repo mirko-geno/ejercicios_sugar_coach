@@ -47,13 +47,7 @@ fun IntersectionScreen(modifier: Modifier = Modifier) {
                     )
                 },
                 modifier = Modifier.fillMaxWidth(),
-                colors = TextFieldDefaults.outlinedTextFieldColors(
-                    textColor = MaterialTheme.colorScheme.onBackground,
-                    containerColor = MaterialTheme.colorScheme.surfaceVariant,
-                    cursorColor = MaterialTheme.colorScheme.primary,
-                    focusedBorderColor = MaterialTheme.colorScheme.primary,
-                    unfocusedBorderColor = MaterialTheme.colorScheme.onSurfaceVariant
-                )
+                colors = TextFieldDefaults.colors()
             )
 
             Spacer(modifier = Modifier.height(8.dp))
@@ -69,13 +63,7 @@ fun IntersectionScreen(modifier: Modifier = Modifier) {
                     )
                 },
                 modifier = Modifier.fillMaxWidth(),
-                colors = TextFieldDefaults.outlinedTextFieldColors(
-                    textColor = MaterialTheme.colorScheme.onBackground,
-                    containerColor = MaterialTheme.colorScheme.surfaceVariant,
-                    cursorColor = MaterialTheme.colorScheme.primary,
-                    focusedBorderColor = MaterialTheme.colorScheme.primary,
-                    unfocusedBorderColor = MaterialTheme.colorScheme.onSurfaceVariant
-                )
+                colors = TextFieldDefaults.colors()
             )
 
             Spacer(modifier = Modifier.height(16.dp))
@@ -94,8 +82,8 @@ fun IntersectionScreen(modifier: Modifier = Modifier) {
                     checked = condition,
                     onCheckedChange = { condition = it },
                     colors = SwitchDefaults.colors(
-                        checkedThumbColor = MaterialTheme.colorScheme.primary,
-                        uncheckedThumbColor = MaterialTheme.colorScheme.secondary
+                        checkedThumbColor = MaterialTheme.colorScheme.background,
+                        uncheckedThumbColor = MaterialTheme.colorScheme.primary
                     )
                 )
             }
