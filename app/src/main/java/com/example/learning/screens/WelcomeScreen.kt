@@ -62,6 +62,18 @@ fun WelcomeScreen(navController: NavHostController) {
             ) {
                 Text("Intersección")
             }
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Button(
+                onClick = { navController.navigate("polygon") },
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    contentColor = MaterialTheme.colorScheme.onPrimary
+                )
+            ) {
+                Text("Área polígonos")
+            }
         }
     }
 }
