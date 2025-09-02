@@ -86,6 +86,18 @@ fun WelcomeScreen(navController: NavHostController) {
             ) {
                 Text("Piedra Papel o Tijera")
             }
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Button(
+                onClick = { navController.navigate("armybattle") },
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    contentColor = MaterialTheme.colorScheme.onPrimary
+                )
+            ) {
+                Text("Batalla de Ejércitos")
+            }
         }
     }
 }
