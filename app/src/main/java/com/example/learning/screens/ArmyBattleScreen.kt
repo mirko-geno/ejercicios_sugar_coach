@@ -2,6 +2,7 @@ package com.example.learning.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -17,6 +18,7 @@ fun ArmyBattleScreen(modifier: Modifier = Modifier) {
     var goodArmy by remember { mutableStateOf(Army<KindRace>()) }
     var evilArmy by remember { mutableStateOf(Army<EvilRace>()) }
     var result by remember { mutableStateOf<String?>(null) }
+    var showHelp by remember { mutableStateOf(false) }
 
     Surface(
         modifier = modifier.fillMaxSize(),
@@ -62,7 +64,7 @@ fun ArmyBattleScreen(modifier: Modifier = Modifier) {
 
             // Botón al final
             Button(onClick = { result = battle(goodArmy, evilArmy) }) {
-                Text("Armar ejércitos y pelear")
+                Text("Armar ejércitos y pelear ⚔")
             }
 
             Spacer(modifier = Modifier.height(16.dp))
@@ -71,6 +73,44 @@ fun ArmyBattleScreen(modifier: Modifier = Modifier) {
                 Text(it, style = MaterialTheme.typography.headlineSmall)
                 Text("Fuerza del Bien: ${goodArmy.totalStrength()}")
                 Text("Fuerza del Mal: ${evilArmy.totalStrength()}")
+            }
+        }
+        Box(modifier = Modifier.fillMaxSize()) {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(bottom = 5.dp),
+                horizontalAlignment = Alignment.End,
+                verticalArrangement = Arrangement.Bottom
+            ) {        // Botón de ayuda abajo a la derecha
+                Button(
+                    onClick = { showHelp = true },
+                    modifier = modifier
+                        .padding(5.dp)
+                ) {
+                    Text("Ayuda")
+                }
+
+                // Diálogo de instrucciones
+                if (showHelp) {
+                    AlertDialog(
+                        onDismissRequest = { showHelp = false },
+                        confirmButton = {
+                            TextButton(onClick = { showHelp = false }) {
+                                Text("Entendido")
+                            }
+                        },
+                        title = { Text("Cómo jugar") },
+                        text = {
+                            Text(
+                                "Armá ejércitos y simulá batallas.\n\n" +
+                                        "Seleccioná la cantidad de unidades de cada tropa.\n\n" +
+                                        "Entre paréntesis se indica los puntos de fuerza por tropa\n\n" +
+                                        "¡Verás los resultados de inmediato tras apretar el botón inferior!"
+                            )
+                        }
+                    )
+                }
             }
         }
     }
